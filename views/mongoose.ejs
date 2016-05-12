@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2><%= animal[0].name %></h2>
+			<p>
+			family: <%= animal[0].family %> <br>
+			habitat: <%= animal[0].habitat %>
+			</p>
+			<form action ='/mongooses/<%= animal[0].id %>/edit' method='post' style='display: inline'>
+				<input type='hidden' name='id' value= <% animal[0].name %>>
+				<button>edit</button>
+			</form>
+			<form action ='/mongooses/<%= animal[0].id %>/destroy' method='post' style='display: inline'>
+				<input type='hidden' name='id' value= <% animal[0].name %>>
+				<button>delete</button>
+			</form>
+			<form action ='/'>
+				<button>return</button>
+			</form>
+			<hr>
+</body>
+
+</html>

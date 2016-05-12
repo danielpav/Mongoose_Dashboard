@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h2>All mongooses:</h2>
+		<% if (error) { %>
+			<%= error %>
+		<% } %>
+		<% for(var x in animals) { %>
+			<p>
+			<%= animals[x].name %> <br>&nbsp &nbsp &nbsp &nbsp habitat: <%= animals[x].habitat %>
+			</p>
+			<a href='/mongooses/<%= animals[x].id %>'>view animal</a>
+			<hr>
+		<% } %>
+	<a href="/new">Make a new mongoose!</a>
+</body>
+
+</html>

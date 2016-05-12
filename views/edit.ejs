@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2>Edit <%= animal[0].name %></h2>
+	<form action='/mongooses/<%= animal[0]._id %>' method='post'>
+		<input type="hidden" name='id' value=<%= animal[0]._id %>>
+		Name: <input type="text" name="name"><br>
+		Family: <input type='text' name="family"><br>
+		Habitat: <input type='text' name="habitat"><br>
+		<button>edit</button>
+	</form>
+	<form action ='/mongooses/<%= animal[0].id %>'>
+		<button>cancel</button>
+	</form>
+</body>
+
+</html>
